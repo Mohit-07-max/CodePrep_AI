@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodePrep AI | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="page-navbar.css">
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body class="sidebar-layout dashboard-layout app-nav-layout">
+
+    <input class="dashboard-menu-state app-page-state" type="checkbox" id="dashboard-menu-state" aria-label="Toggle dashboard navigation">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="app-sidebar dashboard-sidebar app-page-sidebar" aria-label="CodePrep AI sidebar">
+        <a href="main.html" class="app-sidebar-brand" aria-label="CodePrep AI home"><span class="app-sidebar-brand-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><span>CodePrep <span class="app-sidebar-brand-ai">AI</span></span></a>
+        <nav class="app-sidebar-nav" aria-label="Main navigation">
+            <a class="app-nav-link" href="main.html" title="Home"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+            <a class="app-nav-link" href="dashboard.html" aria-current="page" title="Dashboard"><i class="fa-solid fa-table-columns" aria-hidden="true"></i><span>Dashboard</span></a>
+            <a class="app-nav-link" href="quiz-setup.html" title="Practice"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span>Practice</span></a>
+            <a class="app-nav-link" href="history.html" title="Quiz History"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Quiz History</span></a>
+            <a class="app-nav-link" href="result.html" title="Performance"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Performance</span></a>
+            <a class="app-nav-link" href="main.html#languages" title="Topics"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Topics</span></a>
+        </nav>
+        <div class="app-sidebar-account">
+            <a class="app-nav-link" href="profile.html" title="Profile"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Profile</span></a>
+            <a class="app-nav-link" href="login.html" title="Sign in"><i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i><span>Sign in</span></a>
+        </div>
+    </aside>
+    <label class="dashboard-sidebar-backdrop app-page-backdrop" for="dashboard-menu-state" aria-label="Close dashboard navigation"></label>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar dashboard-navbar app-page-navbar">
+
+            <div class="dashboard-heading app-page-heading">
+                <label class="dashboard-menu-button app-page-menu-toggle" for="dashboard-menu-state" title="Toggle navigation">
+                    <span></span><span></span><span></span>
+                    <span class="dashboard-visually-hidden">Toggle dashboard navigation</span>
+                </label>
+                <div class="topbar-title">
+                    <h1 class="app-page-title">Dashboard</h1>
+                </div>
+            </div>
+
+            <div class="topbar-right app-page-actions">
+
+                <a href="main.html" class="dashboard-icon-link app-page-home" aria-label="Home" title="Home">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                </a>
+
+                <button class="notification-btn app-page-bell" aria-label="Notifications" title="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile app-page-student">
+
+                    <div class="avatar app-page-avatar">
+                        M
+                    </div>
+
+                    <div class="profile-info app-page-student-info">
+                        <strong>Mohit</strong>
+                        <span>Student</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-text">
+
+                <span class="welcome-label">
+                    <i class="fa-solid fa-sparkles"></i>
+                    AI-Powered Learning
+                </span>
+
+                <h2>
+                    Welcome back, <span>Mohit!</span>
+                </h2>
+
+                <p>
+                    Ready to continue your coding preparation?
+                    Start a practice session and improve your skills.
+                </p>
+
+                <a href="quiz-setup.html" class="primary-btn">
+                    <i class="fa-solid fa-play"></i>
+                    Start Practice
+                </a>
+
+            </div>
+
+            <div class="welcome-visual">
+
+                <div class="code-window">
+
+                    <div class="window-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="code-content">
+                        <p><span class="purple">function</span> <span class="blue">practice</span>() {</p>
+                        <p class="indent">
+                            <span class="purple">return</span>
+                            <span class="green">"Keep Coding!"</span>;
+                        </p>
+                        <p>}</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Quizzes Completed</span>
+                    <strong>24</strong>
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12% this month
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Average Accuracy</span>
+                    <strong>82%</strong>
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        5% improvement
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green-icon">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Current Streak</span>
+                    <strong>7 Days</strong>
+                    <small>
+                        Keep it going!
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Preparation</span>
+                    <strong>68%</strong>
+                    <small>
+                        Intermediate
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTENT GRID ================= -->
+
+        <section class="content-grid">
+
+
+            <!-- LEFT -->
+
+            <div class="left-content">
+
+                <!-- QUICK PRACTICE -->
+
+                <div class="section-header">
+
+                    <div>
+                        <h3>Quick Practice</h3>
+                        <p>Choose a language and start coding.</p>
+                    </div>
+
+                    <a href="main.html#languages">View all</a>
+
+                </div>
+
+
+                <div class="language-grid">
+
+                    <div class="language-card">
+
+                        <div class="language-icon c-icon">
+                            <i class="devicon-c-plain colored" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <h4>C Programming</h4>
+                            <p>12 topics</p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="language-card">
+
+                        <div class="language-icon cpp-icon">
+                            <i class="devicon-cplusplus-plain colored" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <h4>C++</h4>
+                            <p>15 topics</p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="language-card">
+
+                        <div class="language-icon python-icon">
+                            <i class="devicon-python-plain colored" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <h4>Python</h4>
+                            <p>18 topics</p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="language-card">
+
+                        <div class="language-icon js-icon">
+                            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <h4>JavaScript</h4>
+                            <p>16 topics</p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RECENT QUIZZES -->
+
+                <div class="section-header recent-header">
+
+                    <div>
+                        <h3>Recent Quizzes</h3>
+                        <p>Your latest practice sessions.</p>
+                    </div>
+
+                    <a href="history.html">View history</a>
+
+                </div>
+
+
+                <div class="quiz-table-wrapper">
+                    <div class="quiz-table" role="region" aria-label="Recent quizzes table" tabindex="0">
+
+                        <div class="table-head">
+                            <span>Quiz</span>
+                            <span>Language</span>
+                            <span>Score</span>
+                            <span>Date</span>
+                        </div>
+
+
+                        <div class="table-row">
+
+                            <span class="quiz-name">
+                                Loops & Conditions
+                            </span>
+
+                            <span>
+                                <b class="tag c-tag">C</b>
+                            </span>
+
+                            <span class="score good">
+                                90%
+                            </span>
+
+                            <span>
+                                Today
+                            </span>
+
+                        </div>
+
+
+                        <div class="table-row">
+
+                            <span class="quiz-name">
+                                Arrays
+                            </span>
+
+                            <span>
+                                <b class="tag cpp-tag">C++</b>
+                            </span>
+
+                            <span class="score good">
+                                84%
+                            </span>
+
+                            <span>
+                                Yesterday
+                            </span>
+
+                        </div>
+
+
+                        <div class="table-row">
+
+                            <span class="quiz-name">
+                                Functions
+                            </span>
+
+                            <span>
+                                <b class="tag python-tag">Python</b>
+                            </span>
+
+                            <span class="score average">
+                                72%
+                            </span>
+
+                            <span>
+                                Sep 29
+                            </span>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <aside class="right-content">
+
+                <!-- PREPARATION -->
+
+                <div class="panel preparation-panel">
+
+                    <div class="panel-title">
+                        <div>
+                            <h3>Preparation</h3>
+                            <p>Overall progress</p>
+                        </div>
+
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+
+
+                    <div class="progress-circle">
+
+                        <div class="progress-inner">
+                            <strong>68%</strong>
+                            <span>Prepared</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-details">
+
+                        <div>
+                            <span>Strong Topics</span>
+                            <strong>8</strong>
+                        </div>
+
+                        <div>
+                            <span>Need Practice</span>
+                            <strong>4</strong>
+                        </div>
+
+                    </div>
+
+
+                    <a href="result.html" class="secondary-btn">
+                        View Analysis
+                    </a>
+
+                </div>
+
+
+                <!-- AI RECOMMENDATION -->
+
+                <div class="panel ai-panel">
+
+                    <div class="ai-heading">
+
+                        <div class="ai-symbol">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+
+                        <div>
+                            <h3>AI Recommendation</h3>
+                            <span>Based on your performance</span>
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Your performance in <strong>arrays</strong> is
+                        slightly below your average. Practice array
+                        manipulation questions to improve your score.
+                    </p>
+
+
+                    <a href="quiz-setup.html" class="ai-btn">
+                        Practice Arrays
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- DAILY GOAL -->
+
+                <div class="panel daily-panel">
+
+                    <div class="panel-title">
+
+                        <div>
+                            <h3>Daily Goal</h3>
+                            <p>Keep your streak alive</p>
+                        </div>
+
+                        <i class="fa-solid fa-fire"></i>
+
+                    </div>
+
+
+                    <div class="goal-progress">
+
+                        <div class="goal-text">
+                            <strong>3 / 5</strong>
+                            <span>questions completed</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+</body>
+</html>

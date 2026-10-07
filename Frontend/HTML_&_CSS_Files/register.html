@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Create an account | CodePrep AI</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="register.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" href="sidebar.css">
+	<script src="sidebar-toggle.js" defer></script>
+</head>
+
+<body class="sidebar-layout with-app-sidebar">
+
+	<aside class="app-sidebar" aria-label="CodePrep AI sidebar">
+		<a href="main.html" class="app-sidebar-brand" aria-label="CodePrep AI home"><span class="app-sidebar-brand-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><span>CodePrep <span class="app-sidebar-brand-ai">AI</span></span></a>
+		<nav class="app-sidebar-nav" aria-label="Main navigation">
+			<a class="app-nav-link" href="main.html" title="Home"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+			<a class="app-nav-link" href="dashboard.html" title="Dashboard"><i class="fa-solid fa-table-columns" aria-hidden="true"></i><span>Dashboard</span></a>
+			<a class="app-nav-link" href="quiz-setup.html" title="Practice"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span>Practice</span></a>
+			<a class="app-nav-link" href="history.html" title="Quiz History"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Quiz History</span></a>
+			<a class="app-nav-link" href="result.html" title="Performance"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Performance</span></a>
+			<a class="app-nav-link" href="main.html#languages" title="Topics"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Topics</span></a>
+		</nav>
+		<div class="app-sidebar-account">
+			<a class="app-nav-link" href="profile.html" title="Profile"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Profile</span></a>
+			<a class="app-nav-link" href="login.html" title="Sign in"><i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i><span>Sign in</span></a>
+		</div>
+	</aside>
+
+	<main class="login-container register-container">
+		<div class="login-card register-card">
+			<section class="form-panel register-form-panel" aria-labelledby="register-title">
+				<a href="main.html" class="form-brand" aria-label="CodePrep AI home">
+					<span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+					<span>CodePrep <span class="logo-ai">AI</span></span>
+				</a>
+
+				<div class="form-heading">
+					<h1 id="register-title">Create your account</h1>
+					<p class="subtitle">Get started with CodePrep AI.</p>
+				</div>
+
+				<form>
+					<div class="input-group">
+						<label for="name">Full name</label>
+						<div class="input-wrapper">
+							<span class="input-icon" aria-hidden="true">N</span>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								placeholder="Your name"
+								autocomplete="name"
+								required
+							>
+						</div>
+					</div>
+
+					<div class="input-group">
+						<label for="email">Email address</label>
+						<div class="input-wrapper">
+							<span class="input-icon" aria-hidden="true">@</span>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="you@example.com"
+								autocomplete="email"
+								required
+							>
+						</div>
+					</div>
+
+					<div class="input-group">
+						<label for="password">Password</label>
+						<div class="input-wrapper">
+							<span class="input-icon" aria-hidden="true">*</span>
+							<input
+								type="password"
+								id="password"
+								name="password"
+								placeholder="At least 8 characters"
+								autocomplete="new-password"
+								minlength="8"
+								required
+							>
+						</div>
+					</div>
+
+					<div class="input-group">
+						<label for="confirm-password">Confirm password</label>
+						<div class="input-wrapper">
+							<span class="input-icon" aria-hidden="true">*</span>
+							<input
+								type="password"
+								id="confirm-password"
+								name="confirm-password"
+								placeholder="Enter your password again"
+								autocomplete="new-password"
+								minlength="8"
+								required
+							>
+						</div>
+					</div>
+
+					<label class="terms">
+						<input type="checkbox" name="terms" required>
+						<span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
+					</label>
+
+					<button type="submit" class="login-button">Create account</button>
+				</form>
+
+				<div class="register">
+					<span>Already have an account?</span>
+					<a href="login.html">Log in</a>
+				</div>
+
+				<div class="divider"><span>Or With</span></div>
+
+				<div class="social-options">
+					<button class="social-button" type="button"><i class="fa-brands fa-google" aria-hidden="true"></i>Google</button>
+					<button class="social-button" type="button"><i class="fa-brands fa-apple" aria-hidden="true"></i>Apple</button>
+				</div>
+
+				<a href="main.html" class="back-home">Back to CodePrep AI</a>
+			</section>
+		</div>
+	</main>
+
+</body>
+</html>

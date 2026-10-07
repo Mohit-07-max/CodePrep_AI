@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Results | CodePrep AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="result.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="page-navbar.css">
+</head>
+
+<body class="sidebar-layout app-nav-layout">
+
+    <input class="app-page-state" type="checkbox" id="result-menu-state" aria-label="Toggle results navigation">
+
+    <aside class="app-sidebar app-page-sidebar" aria-label="CodePrep AI sidebar">
+        <a href="main.html" class="app-sidebar-brand" aria-label="CodePrep AI home"><span class="app-sidebar-brand-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><span>CodePrep <span class="app-sidebar-brand-ai">AI</span></span></a>
+        <nav class="app-sidebar-nav" aria-label="Main navigation">
+            <a class="app-nav-link" href="main.html" title="Home"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+            <a class="app-nav-link" href="dashboard.html" title="Dashboard"><i class="fa-solid fa-table-columns" aria-hidden="true"></i><span>Dashboard</span></a>
+            <a class="app-nav-link" href="quiz-setup.html" title="Practice"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span>Practice</span></a>
+            <a class="app-nav-link" href="history.html" title="Quiz History"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Quiz History</span></a>
+            <a class="app-nav-link" href="result.html" aria-current="page" title="Performance"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Performance</span></a>
+            <a class="app-nav-link" href="main.html#languages" title="Topics"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Topics</span></a>
+        </nav>
+        <div class="app-sidebar-account">
+            <a class="app-nav-link" href="profile.html" title="Profile"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Profile</span></a>
+            <a class="app-nav-link" href="login.html" title="Sign in"><i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i><span>Sign in</span></a>
+        </div>
+    </aside>
+    <label class="app-page-backdrop" for="result-menu-state" aria-label="Close results navigation"></label>
+
+    <!-- CodePrep AI — Luminous Glass Terminal -->
+
+    <div class="result-page">
+
+        <!-- ================= TOP NAVBAR ================= -->
+
+        <header class="topbar app-page-navbar">
+            <div class="app-page-heading">
+                <label class="app-page-menu-toggle" for="result-menu-state" title="Toggle navigation">
+                    <span></span><span></span><span></span>
+                    <span class="app-page-visually-hidden">Toggle results navigation</span>
+                </label>
+                <h1 class="app-page-title">Results</h1>
+            </div>
+            <div class="top-actions app-page-actions">
+                <a href="main.html" class="app-page-home" aria-label="Home" title="Home"><i class="fa-solid fa-house" aria-hidden="true"></i></a>
+                <button class="app-page-bell" type="button" aria-label="Notifications" title="Notifications"><i class="fa-regular fa-bell" aria-hidden="true"></i></button>
+                <div class="profile app-page-student">
+                    <div class="profile-avatar app-page-avatar">M</div>
+                    <div class="profile-info app-page-student-info"><strong>Mohit</strong><span>Student</span></div>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+
+            <!-- ================= HERO RESULT ================= -->
+
+            <section class="result-hero">
+
+                <div class="hero-content">
+
+                    <div class="success-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <span class="completed-label">
+                        QUIZ COMPLETED
+                    </span>
+
+                    <h1>Great Work, Mohit!</h1>
+
+                    <p>
+                        You have completed your C Programming practice quiz.
+                        Here's a breakdown of your performance.
+                    </p>
+
+                </div>
+
+
+                <!-- SCORE CIRCLE -->
+
+                <div class="score-container">
+
+                    <div class="score-circle">
+
+                        <div class="score-inner">
+                            <strong>82%</strong>
+                            <span>Score</span>
+                        </div>
+
+                    </div>
+
+                    <div class="score-label">
+                        Preparation Level
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= STAT CARDS ================= -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Correct Answers</span>
+                        <strong>8 / 10</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+
+                    <div>
+                        <span>Incorrect Answers</span>
+                        <strong>2</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Time Taken</span>
+                        <strong>12:48</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <div>
+                        <span>Accuracy</span>
+                        <strong>80%</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= MAIN GRID ================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- ================= LEFT COLUMN ================= -->
+
+                <div class="left-column">
+
+
+                    <!-- PERFORMANCE OVERVIEW -->
+
+                    <div class="panel performance-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-label">
+                                    PERFORMANCE
+                                </span>
+
+                                <h2>Performance Overview</h2>
+                            </div>
+
+                            <span class="result-badge">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                Good Progress
+                            </span>
+
+                        </div>
+
+
+                        <div class="performance-content">
+
+                            <!-- SCORE -->
+
+                            <div class="large-score">
+
+                                <span>Your Score</span>
+
+                                <strong>82%</strong>
+
+                                <div class="score-bar">
+                                    <div></div>
+                                </div>
+
+                                <small>
+                                    8 correct out of 10 questions
+                                </small>
+
+                            </div>
+
+
+                            <!-- MINI STATS -->
+
+                            <div class="mini-stat-list">
+
+                                <div class="mini-stat">
+
+                                    <div class="mini-icon green">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Correct</span>
+                                        <strong>8</strong>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-stat">
+
+                                    <div class="mini-icon red">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Wrong</span>
+                                        <strong>2</strong>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-stat">
+
+                                    <div class="mini-icon gray">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Skipped</span>
+                                        <strong>0</strong>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <section class="panel latest-quiz-panel" aria-labelledby="latest-quiz-title">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-label">LATEST QUIZ</span>
+                                <h2 id="latest-quiz-title">Accuracy by question</h2>
+                            </div>
+                            <span class="chart-summary">Final accuracy <strong>80%</strong></span>
+                        </div>
+
+                        <svg class="accuracy-chart" viewBox="0 0 640 250" role="img"
+                             aria-labelledby="latest-quiz-chart-label latest-quiz-chart-description">
+                            <title id="latest-quiz-chart-label">Cumulative accuracy during the latest quiz</title>
+                            <desc id="latest-quiz-chart-description">
+                                Accuracy started at 100 percent and ended at 80 percent. It dipped after incorrect answers to questions 4 and 8.
+                            </desc>
+                            <defs>
+                                <linearGradient id="accuracy-area-gradient" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#5b4bff" stop-opacity="0.2" />
+                                    <stop offset="100%" stop-color="#19c3b1" stop-opacity="0.02" />
+                                </linearGradient>
+                            </defs>
+
+                            <line class="chart-grid-line" x1="58" y1="48" x2="616" y2="48" />
+                            <line class="chart-grid-line" x1="58" y1="120" x2="616" y2="120" />
+                            <line class="chart-grid-line" x1="58" y1="192" x2="616" y2="192" />
+
+                            <text class="chart-axis-label" x="8" y="52">100%</text>
+                            <text class="chart-axis-label" x="20" y="124">50%</text>
+                            <text class="chart-axis-label" x="30" y="196">0%</text>
+
+                            <path class="accuracy-area"
+                                  d="M58 192 L58 48 L120 48 L182 48 L244 84 L306 76.8 L368 72 L430 68.4 L492 84 L554 80.2 L616 76.8 L616 192 Z" />
+                            <path class="accuracy-line"
+                                  d="M58 48 L120 48 L182 48 L244 84 L306 76.8 L368 72 L430 68.4 L492 84 L554 80.2 L616 76.8" />
+
+                            <circle class="accuracy-point" cx="58" cy="48" r="5" />
+                            <circle class="accuracy-point" cx="120" cy="48" r="5" />
+                            <circle class="accuracy-point" cx="182" cy="48" r="5" />
+                            <circle class="accuracy-point missed-point" cx="244" cy="84" r="5" />
+                            <circle class="accuracy-point" cx="306" cy="76.8" r="5" />
+                            <circle class="accuracy-point" cx="368" cy="72" r="5" />
+                            <circle class="accuracy-point" cx="430" cy="68.4" r="5" />
+                            <circle class="accuracy-point missed-point" cx="492" cy="84" r="5" />
+                            <circle class="accuracy-point" cx="554" cy="80.2" r="5" />
+                            <circle class="accuracy-point" cx="616" cy="76.8" r="5" />
+
+                            <text class="chart-question-label" x="58" y="224">1</text>
+                            <text class="chart-question-label" x="120" y="224">2</text>
+                            <text class="chart-question-label" x="182" y="224">3</text>
+                            <text class="chart-question-label" x="244" y="224">4</text>
+                            <text class="chart-question-label" x="306" y="224">5</text>
+                            <text class="chart-question-label" x="368" y="224">6</text>
+                            <text class="chart-question-label" x="430" y="224">7</text>
+                            <text class="chart-question-label" x="492" y="224">8</text>
+                            <text class="chart-question-label" x="554" y="224">9</text>
+                            <text class="chart-question-label" x="616" y="224">10</text>
+                        </svg>
+
+                        <div class="chart-legend" aria-hidden="true">
+                            <span><i class="legend-line"></i>Cumulative accuracy</span>
+                            <span><i class="legend-dot missed"></i>Incorrect answer</span>
+                        </div>
+
+                    </section>
+
+
+                    <!-- TOPIC PERFORMANCE -->
+
+                    <div class="panel topic-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-label">
+                                    TOPIC ANALYSIS
+                                </span>
+
+                                <h2>Topic Performance</h2>
+                            </div>
+
+                        </div>
+
+
+                        <div class="topic-list">
+
+
+                            <div class="topic-row">
+
+                                <div class="topic-name">
+                                    <span>Variables & Data Types</span>
+                                    <strong>100%</strong>
+                                </div>
+
+                                <div class="topic-progress">
+                                    <div class="green-progress"
+                                         style="width:100%">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="topic-row">
+
+                                <div class="topic-name">
+                                    <span>Operators</span>
+                                    <strong>90%</strong>
+                                </div>
+
+                                <div class="topic-progress">
+                                    <div class="blue-progress"
+                                         style="width:90%">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="topic-row">
+
+                                <div class="topic-name">
+                                    <span>Conditional Statements</span>
+                                    <strong>80%</strong>
+                                </div>
+
+                                <div class="topic-progress">
+                                    <div class="blue-progress"
+                                         style="width:80%">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="topic-row">
+
+                                <div class="topic-name">
+                                    <span>Loops</span>
+                                    <strong>70%</strong>
+                                </div>
+
+                                <div class="topic-progress">
+                                    <div class="orange-progress"
+                                         style="width:70%">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="topic-row">
+
+                                <div class="topic-name">
+                                    <span>Functions</span>
+                                    <strong>60%</strong>
+                                </div>
+
+                                <div class="topic-progress">
+                                    <div class="red-progress"
+                                         style="width:60%">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION BREAKDOWN -->
+
+                    <div class="panel breakdown-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-label">
+                                    QUESTION REVIEW
+                                </span>
+
+                                <h2>Question Breakdown</h2>
+                            </div>
+
+                            <button class="review-btn">
+                                Review Answers
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="question-grid">
+
+                            <div class="question-item correct">
+                                <span>01</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="question-item correct">
+                                <span>02</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="question-item correct">
+                                <span>03</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="question-item incorrect">
+                                <span>04</span>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+
+                            <div class="question-item correct">
+                                <span>05</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="question-item correct">
+                                <span>06</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="question-item correct">
+                                <span>07</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="question-item incorrect">
+                                <span>08</span>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+
+                            <div class="question-item correct">
+                                <span>09</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="question-item correct">
+                                <span>10</span>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= RIGHT COLUMN ================= -->
+
+                <aside class="right-column">
+
+
+                    <!-- AI ANALYSIS -->
+
+                    <div class="ai-card">
+
+                        <div class="ai-header">
+
+                            <div class="ai-icon">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+
+                            <div>
+                                <span>CODEPREP AI</span>
+                                <h3>AI Analysis</h3>
+                            </div>
+
+                        </div>
+
+
+                        <p class="ai-description">
+                            Your performance shows a strong understanding
+                            of basic C programming concepts.
+                        </p>
+
+
+                        <div class="ai-section">
+
+                            <div class="ai-section-title">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Strong Areas
+                            </div>
+
+                            <div class="tag-list">
+
+                                <span>Variables</span>
+                                <span>Operators</span>
+                                <span>Conditions</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ai-section">
+
+                            <div class="ai-section-title warning">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                Needs Practice
+                            </div>
+
+                            <div class="tag-list warning-tags">
+
+                                <span>Functions</span>
+                                <span>Loops</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="ai-feedback-btn">
+                            <i class="fa-solid fa-sparkles"></i>
+                            View Full AI Feedback
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- QUIZ DETAILS -->
+
+                    <div class="details-card">
+
+                        <div class="details-heading">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <h3>Quiz Details</h3>
+                        </div>
+
+
+                        <div class="detail-row">
+                            <span>Language</span>
+                            <strong>C</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Difficulty</span>
+                            <strong class="difficulty">
+                                Intermediate
+                            </strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Total Questions</span>
+                            <strong>10</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Completed</span>
+                            <strong>10 / 10</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Date</span>
+                            <strong>01 Oct 2026</strong>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIONS -->
+
+                    <div class="actions-card">
+
+                        <a class="primary-btn" href="quiz-setup.html">
+                            <i class="fa-solid fa-rotate-right"></i>
+                            Practice Again
+                        </a>
+
+                        <a class="secondary-btn" href="history.html">
+                            <i class="fa-solid fa-chart-line"></i>
+                            View Quiz History
+                        </a>
+
+                        <a class="secondary-btn" href="profile.html">
+                            <i class="fa-solid fa-user"></i>
+                            View Profile
+                        </a>
+
+                        <a class="secondary-btn" href="main.html">
+                            <i class="fa-solid fa-house"></i>
+                            Back to Home
+                        </a>
+
+                    </div>
+
+
+                </aside>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

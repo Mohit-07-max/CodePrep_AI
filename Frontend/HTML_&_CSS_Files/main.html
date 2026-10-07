@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodePrep AI - Prepare. Practice. Code Smarter.</title>
+  <meta name="description" content="AI-powered programming practice for students: quizzes, coding practice and personalized feedback.">
+  <!-- Fonts (optional): the CSS falls back to system fonts if these fail to load -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="sidebar-layout">
+
+<header class="site-header">
+  <nav class="main-navbar" aria-label="Main navigation">
+    <div class="main-nav-left">
+      <button class="main-menu-toggle" type="button" aria-controls="app-sidebar" aria-expanded="false" aria-label="Open sidebar navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#home" class="main-brand" aria-label="CodePrep AI home">
+        <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span class="main-brand-name">CodePrep <span>AI</span></span>
+      </a>
+    </div>
+    <a href="profile.html" class="main-profile-link">Profile</a>
+  </nav>
+</header>
+
+<aside class="app-sidebar" id="app-sidebar" aria-label="CodePrep AI sidebar" aria-hidden="true" inert>
+  <div class="drawer-heading">
+    <a href="main.html" class="app-sidebar-brand" aria-label="CodePrep AI home">
+      <span class="app-sidebar-brand-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+      <span>CodePrep <span class="app-sidebar-brand-ai">AI</span></span>
+    </a>
+    <button class="drawer-close" type="button" aria-label="Close sidebar navigation">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <nav class="app-sidebar-nav" aria-label="Main navigation">
+    <a class="app-nav-link" href="main.html" aria-current="page" title="Home"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+    <a class="app-nav-link" href="dashboard.html" title="Dashboard"><i class="fa-solid fa-table-columns" aria-hidden="true"></i><span>Dashboard</span></a>
+    <a class="app-nav-link" href="quiz-setup.html" title="Practice"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span>Practice</span></a>
+    <a class="app-nav-link" href="history.html" title="Quiz History"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Quiz History</span></a>
+    <a class="app-nav-link" href="result.html" title="Performance"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Performance</span></a>
+    <a class="app-nav-link" href="main.html#languages" title="Topics"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Topics</span></a>
+  </nav>
+  <div class="app-sidebar-account">
+    <a class="app-nav-link" href="profile.html" title="Profile"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Profile</span></a>
+    <a class="app-nav-link" href="login.html" title="Sign in"><i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i><span>Sign in</span></a>
+  </div>
+</aside>
+<button class="sidebar-overlay" type="button" aria-label="Close sidebar navigation" tabindex="-1"></button>
+
+<main id="home">
+
+  <!-- Hero: introduces the platform and previews AI feedback on sample code. -->
+
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Prepare. Practice. Code Smarter.</h1>
+      <p class="hero-sub">CodePrep AI helps you improve your programming skills with AI-generated quizzes, coding practice, and personalized feedback.</p>
+      <div class="hero-buttons">
+        <a href="quiz-setup.html" class="btn btn-primary">Start Practicing</a>
+        <a href="#languages" class="btn btn-outline">Explore Languages</a>
+      </div>
+    </div>
+
+    <!-- Simulated coding terminal (static, no JavaScript) -->
+
+    <div class="terminal" aria-label="Example code and AI feedback">
+      <div class="terminal-bar"><em>quiz_07.py</em></div>
+      <pre class="terminal-code"><code><span class="c-com"># Q7: Sum of even numbers in a list</span>
+<span class="c-key">def</span><span class="c-fn">sum_even</span>(nums):
+    total = <span class="c-num">0</span>
+    <span class="c-key">for</span> n <span class="c-key">in</span> nums:
+        <span class="c-key">if</span> n % <span class="c-num">2</span> == <span class="c-num">0</span>:
+            total += n
+    <span class="c-key">return</span> total</code></pre>
+      <div class="terminal-ai">
+        <strong>AI feedback</strong>
+        <p>Correct. Clean loop and condition. Try a list comprehension next.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics: highlights the breadth and availability of practice content. -->
+  <section class="stats container" aria-label="Platform statistics">
+    <article class="stat-card">
+      <h2>10K+</h2>
+      <p>Practice Questions</p>
+    </article>
+
+    <article class="stat-card">
+      <h2>20+</h2>
+      <p>Programming Topics</p>
+    </article>
+
+    <article class="stat-card">
+      <h2>AI</h2>
+      <p>AI-Powered Feedback</p>
+    </article>
+
+    <article class="stat-card">
+      <h2>24/7</h2><p>Practice</p>
+    </article>
+
+  </section>
+
+  <!-- Features: summarizes the core study tools available on the platform. -->
+  <section class="section container" id="features">
+    <div class="section-head">
+      <h2>Everything you need to practice</h2>
+      <p>Six tools that take you from first quiz to confident coder.</p>
+    </div>
+    <div class="card-grid">
+      <article class="card feature-card">
+        <span class="icon">AI</span>
+        <h3>AI Generated Quizzes</h3>
+        <p>Fresh questions created for your language and level every time.</p>
+      </article>
+
+      <article class="card feature-card">
+        <span class="icon">&lt;/&gt;</span>
+        <h3>Online Code Practice</h3>
+        <p>Write and test solutions to real programming problems.</p>
+      </article>
+
+      <article class="card feature-card">
+        <span class="icon">&#10003;</span>
+        <h3>Instant Evaluation</h3>
+        <p>Submit your answers and see your results in seconds.</p>
+      </article>
+
+      <article class="card feature-card">
+        <span class="icon">&#9733;</span>
+        <h3>Personalized Feedback</h3>
+        <p>Get tips based on the topics you find hardest.</p>
+      </article>
+
+      <article class="card feature-card">
+        <span class="icon">&#8599;</span>
+        <h3>Progress Tracking</h3>
+        <p>Watch your scores and preparation level grow over time.</p>
+      </article>
+
+      <article class="card feature-card">
+        <span class="icon">{ }</span>
+        <h3>Multiple Programming Languages</h3>
+        <p>Practice C, C++, Python, Java, JavaScript, and HTML &amp; CSS.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Languages: lets learners compare topics and choose a practice path. -->
+
+  <section class="section container" id="languages">
+
+    <div class="section-head">
+      <h2>Choose your language</h2>
+      <p>Pick a language and start a quiz that matches your level.</p>
+    </div>
+
+    <div class="language-options">
+      <a href="quiz-setup.html" class="card language-option">
+        <span class="language-mark" aria-hidden="true"><i class="devicon-c-plain colored"></i></span>
+        <span class="language-copy"><strong>C Programming</strong><small>Memory, pointers and fundamentals</small></span>
+        <span class="fa-solid fa-arrow-right language-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+
+      <a href="quiz-setup.html" class="card language-option">
+        <span class="language-mark" aria-hidden="true"><i class="devicon-cplusplus-plain colored"></i></span>
+        <span class="language-copy"><strong>C++</strong><small>Classes, templates and problem solving</small></span>
+        <span class="fa-solid fa-arrow-right language-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+
+      <a href="quiz-setup.html" class="card language-option">
+        <span class="language-mark" aria-hidden="true"><i class="devicon-python-plain colored"></i></span>
+        <span class="language-copy"><strong>Python</strong><small>Loops, lists and functions</small></span>
+        <span class="fa-solid fa-arrow-right language-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+
+      <a href="quiz-setup.html" class="card language-option">
+        <span class="language-mark" aria-hidden="true"><i class="devicon-java-plain colored"></i></span>
+        <span class="language-copy"><strong>Java</strong><small>Object-oriented programming and data structures</small></span>
+        <span class="fa-solid fa-arrow-right language-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+
+      <a href="quiz-setup.html" class="card language-option">
+        <span class="language-mark" aria-hidden="true"><i class="devicon-javascript-plain colored"></i></span>
+        <span class="language-copy"><strong>JavaScript</strong><small>Variables, functions and web logic</small></span>
+        <span class="fa-solid fa-arrow-right language-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+
+      <a href="quiz-setup.html" class="card language-option">
+        <span class="language-mark html-mark" aria-hidden="true"><i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i></span>
+        <span class="language-copy"><strong>HTML &amp; CSS</strong><small>Page structure and styling</small></span>
+        <span class="fa-solid fa-arrow-right language-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Steps: explains the path from choosing a language to receiving feedback. -->
+
+  <section class="section container" id="how">
+    <div class="section-head">
+      <h2>How CodePrep AI Works</h2>
+      <p>Four steps from choosing a language to getting feedback.</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">01</span>
+        <h3>Select Language</h3>
+        <p>Pick the language you want to practice.</p>
+      </li>
+
+      <li class="step">
+        <span class="step-num">02</span>
+        <h3>Get AI Quiz</h3>
+        <p>Receive questions made for your level.</p>
+      </li>
+
+      <li class="step">
+        <span class="step-num">03</span>
+        <h3>Solve &amp; Submit</h3>
+        <p>Answer the questions and submit them.</p>
+      </li>
+
+      <li class="step">
+        <span class="step-num">04</span>
+        <h3>Get Feedback</h3>
+        <p>See your score and what to improve.</p>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- Feedback preview: shows the result and coaching summary after a quiz. -->
+
+  <section class="section container" id="feedback">
+    <div class="section-head">
+      <h2>AI feedback preview</h2>
+      <p>This is how your results will look after a quiz.</p>
+    </div>
+    <div class="dashboard">
+      <article class="dash-panel">
+        <h3>Quiz Result</h3>
+        <div class="mini-stats">
+          <div class="mini-stat">
+            <span>Score</span>
+            <strong>0</strong>
+          </div>
+
+          <div class="mini-stat">
+            <span>Questions</span>
+            <strong>0</strong>
+          </div>
+
+          <div class="mini-stat">
+            <span>Correct Answers</span>
+            <strong>0</strong>
+          </div>
+
+          <div class="mini-stat">
+            <span>Preparation</span>
+            <strong>0</strong>
+          </div>
+        </div>
+
+        <!-- Progress bars: change the width in the inline style to change the fill -->
+
+        <div class="bar-row">
+          <span>Score</span>
+          <div class="bar">
+            <div class="bar-fill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <div class="bar-row">
+          <span>Correct Answers</span>
+          <div class="bar">
+            <div class="bar-fill" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <span>Preparation</span>
+          <div class="bar">
+            <div class="bar-fill" style="width:0%"></div>
+          </div>
+        </div>
+
+      </article>
+      <article class="dash-panel ai-panel">
+        <h3>AI Feedback</h3>
+        <blockquote>
+          <p>“Your fundamentals are improving.</p>
+          <p>Focus more on loops, arrays and functions.”</p>
+        </blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- Call to action: directs visitors back to the available practice topics. -->
+
+  <section class="cta container">
+    <h2>Ready to improve your coding skills?</h2>
+    <p>Practice smarter with AI-powered programming preparation.</p>
+    <a href="quiz-setup.html" class="btn btn-light">Start Coding</a>
+  </section>
+
+</main>
+
+<!-- Footer: groups product, resource, social, and copyright links. -->
+ 
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo"><span class="logo-mark">&lt;/&gt;</span> CodePrep AI</a>
+      <p>AI-powered programming practice for students.</p>
+    </div>
+    <nav aria-label="Product links">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#how">How it works</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Resources">
+      <h4>Resources</h4>
+      <ul><li><a href="#">Guides</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Social links">
+      <h4>Social</h4>
+      <ul><li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">X (Twitter)</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="copyright container">&copy; 2026 CodePrep AI. All rights reserved.</p>
+</footer>
+
+<script>
+  const sidebar = document.querySelector('#app-sidebar');
+  const menuToggle = document.querySelector('.main-menu-toggle');
+  const drawerClose = document.querySelector('.drawer-close');
+  const overlay = document.querySelector('.sidebar-overlay');
+  const setSidebarOpen = (isOpen) => {
+    sidebar.classList.toggle('is-open', isOpen);
+      document.body.classList.toggle('sidebar-open', isOpen);
+    sidebar.inert = !isOpen;
+    sidebar.setAttribute('aria-hidden', String(!isOpen));
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close sidebar navigation' : 'Open sidebar navigation');
+    menuToggle.classList.toggle('is-open', isOpen);
+  };
+
+  menuToggle.addEventListener('click', () => {
+    setSidebarOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+  drawerClose.addEventListener('click', () => setSidebarOpen(false));
+  overlay.addEventListener('click', () => setSidebarOpen(false));
+  document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+      setSidebarOpen(false);
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      setSidebarOpen(false);
+      menuToggle.focus();
+    }
+  });
+  sidebar.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setSidebarOpen(false));
+  });
+</script>
+
+</body>
+</html>

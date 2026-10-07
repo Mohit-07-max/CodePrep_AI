@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | CodePrep AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Profile CSS -->
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="page-navbar.css">
+</head>
+
+<body class="profile-layout app-nav-layout">
+
+    <input class="profile-menu-state app-page-state" type="checkbox" id="profile-menu-state" aria-label="Toggle profile navigation">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="app-sidebar profile-sidebar app-page-sidebar" id="app-sidebar" aria-label="CodePrep AI sidebar">
+        <div class="profile-sidebar-heading">
+            <a href="main.html" class="app-sidebar-brand" aria-label="CodePrep AI home"><span class="app-sidebar-brand-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><span>CodePrep <span class="app-sidebar-brand-ai">AI</span></span></a>
+            <label class="profile-sidebar-close" for="profile-menu-state" aria-label="Close profile navigation" title="Close navigation">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </label>
+        </div>
+        <nav class="app-sidebar-nav" aria-label="Main navigation">
+            <a class="app-nav-link" href="main.html" title="Home"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+            <a class="app-nav-link" href="dashboard.html" title="Dashboard"><i class="fa-solid fa-table-columns" aria-hidden="true"></i><span>Dashboard</span></a>
+            <a class="app-nav-link" href="quiz-setup.html" title="Practice"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span>Practice</span></a>
+            <a class="app-nav-link" href="history.html" title="Quiz History"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Quiz History</span></a>
+            <a class="app-nav-link" href="result.html" title="Performance"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Performance</span></a>
+            <a class="app-nav-link" href="main.html#languages" title="Topics"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Topics</span></a>
+        </nav>
+        <div class="app-sidebar-account">
+            <a class="app-nav-link" href="profile.html" aria-current="page" title="Profile"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Profile</span></a>
+            <a class="app-nav-link" href="login.html" title="Sign in"><i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i><span>Sign in</span></a>
+        </div>
+    </aside>
+    <label class="profile-sidebar-backdrop app-page-backdrop" for="profile-menu-state" aria-label="Close profile navigation"></label>
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar app-page-navbar">
+
+            <div class="app-page-heading">
+                <label class="profile-menu-toggle app-page-menu-toggle" for="profile-menu-state" title="Toggle navigation">
+                    <span></span><span></span><span></span>
+                    <span class="app-page-visually-hidden">Toggle profile navigation</span>
+                </label>
+                <h1 class="app-page-title">Profile</h1>
+            </div>
+
+            <div class="topbar-right app-page-actions">
+
+                <a href="main.html" class="icon-btn home-btn app-page-home" aria-label="Home" title="Home">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                </a>
+
+                <button class="icon-btn notification-btn app-page-bell" type="button" aria-label="Notifications" title="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini app-page-student">
+                    <div class="mini-avatar app-page-avatar">MS</div>
+                    <div class="mini-info app-page-student-info"><strong>Mohit</strong><span>Student</span></div>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE CONTENT ================= -->
+        <section class="page-content">
+
+            <!-- PAGE HEADER -->
+            <div class="page-header">
+
+                <div>
+                    <span class="page-label">ACCOUNT</span>
+
+                    <h1>My Profile</h1>
+                </div>
+
+                <button class="edit-profile-btn">
+                    <i class="fa-solid fa-pen"></i>
+                    Edit Profile
+                </button>
+
+            </div>
+
+
+            <!-- ================= PROFILE HERO ================= -->
+            <section class="profile-hero">
+
+                <div class="profile-cover">
+
+                    <div class="cover-glow"></div>
+
+                    <div class="profile-avatar-large">
+                        MS
+
+                        <button class="avatar-edit">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="profile-main-info">
+
+                    <div>
+                        <h2>Mohit Singh Gusain</h2>
+
+                        <p class="username">
+                            <i class="fa-solid fa-at"></i>
+                            mohit
+                        </p>
+
+                        <div class="profile-tags">
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                CSE Student
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-code"></i>
+                                BE CSE Core
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="member-info">
+                        <span>MEMBER SINCE</span>
+                        <strong>September 2026</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= CONTENT GRID ================= -->
+            <div class="profile-grid">
+
+
+                <!-- PERSONAL INFORMATION -->
+                <section class="glass-card personal-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="card-label">PERSONAL</span>
+                            <h3>Personal Information</h3>
+                        </div>
+
+                        <button class="small-edit">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="info-grid">
+
+                        <div class="info-item">
+                            <span>FULL NAME</span>
+
+                            <div>
+                                <i class="fa-solid fa-user"></i>
+                                <strong>Mohit Singh Gusain</strong>
+                            </div>
+                        </div>
+
+
+                        <div class="info-item">
+                            <span>USERNAME</span>
+
+                            <div>
+                                <i class="fa-solid fa-at"></i>
+                                <strong>mohit</strong>
+                            </div>
+                        </div>
+
+
+                        <div class="info-item">
+                            <span>EMAIL</span>
+
+                            <div>
+                                <i class="fa-solid fa-envelope"></i>
+                                <strong>mohit@example.com</strong>
+                            </div>
+                        </div>
+
+
+                        <div class="info-item">
+                            <span>PHONE</span>
+
+                            <div>
+                                <i class="fa-solid fa-phone"></i>
+                                <strong>+91 XXXXX XXXXX</strong>
+                            </div>
+                        </div>
+
+
+                        <div class="info-item">
+                            <span>EDUCATION</span>
+
+                            <div>
+                                <i class="fa-solid fa-building-columns"></i>
+                                <strong>BE CSE Core</strong>
+                            </div>
+                        </div>
+
+
+                        <div class="info-item">
+                            <span>YEAR</span>
+
+                            <div>
+                                <i class="fa-solid fa-calendar"></i>
+                                <strong>1st Year</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- LEARNING PROFILE -->
+                <section class="glass-card learning-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="card-label">LEARNING</span>
+                            <h3>Learning Profile</h3>
+                        </div>
+
+                        <i class="fa-solid fa-brain card-heading-icon"></i>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <div class="learning-top">
+                            <span>Primary Language</span>
+
+                            <strong>C</strong>
+                        </div>
+
+                        <div class="progress-line">
+                            <span style="width: 72%;"></span>
+                        </div>
+
+                        <small>72% preparation</small>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <div class="learning-top">
+                            <span>Python</span>
+
+                            <strong>Beginner</strong>
+                        </div>
+
+                        <div class="progress-line">
+                            <span style="width: 45%;"></span>
+                        </div>
+
+                        <small>45% preparation</small>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <div class="learning-top">
+                            <span>JavaScript</span>
+
+                            <strong>Beginner</strong>
+                        </div>
+
+                        <div class="progress-line">
+                            <span style="width: 31%;"></span>
+                        </div>
+
+                        <small>31% preparation</small>
+
+                    </div>
+
+
+                    <a href="quiz-setup.html" class="practice-link">
+                        Continue Learning
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </section>
+
+
+                <!-- ACHIEVEMENTS -->
+                <section class="glass-card achievements-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="card-label">ACHIEVEMENTS</span>
+                            <h3>My Achievements</h3>
+                        </div>
+
+                        <i class="fa-solid fa-trophy card-heading-icon"></i>
+
+                    </div>
+
+
+                    <div class="achievement-grid">
+
+                        <div class="achievement">
+
+                            <div class="achievement-icon">
+                                <i class="fa-solid fa-fire"></i>
+                            </div>
+
+                            <div>
+                                <strong>7 Days</strong>
+                                <span>Learning Streak</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="achievement">
+
+                            <div class="achievement-icon">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+                            <div>
+                                <strong>24</strong>
+                                <span>Quizzes Completed</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="achievement">
+
+                            <div class="achievement-icon">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+
+                            <div>
+                                <strong>96%</strong>
+                                <span>Best Score</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="achievement">
+
+                            <div class="achievement-icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div>
+                                <strong>1,240</strong>
+                                <span>XP Earned</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ACCOUNT ACTIVITY -->
+                <section class="glass-card activity-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="card-label">ACTIVITY</span>
+                            <h3>Account Activity</h3>
+                        </div>
+
+                        <i class="fa-solid fa-shield-halved card-heading-icon"></i>
+
+                    </div>
+
+
+                    <div class="activity-row">
+
+                        <div class="activity-icon">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </div>
+
+                        <div>
+                            <strong>Last Login</strong>
+                            <span>Today at 7:42 PM</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-row">
+
+                        <div class="activity-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+
+                        <div>
+                            <strong>Password</strong>
+                            <span>Last changed 30 days ago</span>
+                        </div>
+
+                        <button class="activity-action">
+                            Change
+                        </button>
+
+                    </div>
+
+
+                    <div class="activity-row">
+
+                        <div class="activity-icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <div>
+                            <strong>Account Security</strong>
+                            <span>Two-factor authentication</span>
+                        </div>
+
+                        <span class="security-status">
+                            OFF
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PREFERENCES -->
+                <section class="glass-card preferences-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <span class="card-label">PREFERENCES</span>
+                            <h3>Learning Preferences</h3>
+                        </div>
+
+                        <i class="fa-solid fa-sliders card-heading-icon"></i>
+
+                    </div>
+
+
+                    <div class="preference-row">
+
+                        <div>
+                            <strong>AI Recommendations</strong>
+                            <span>Receive personalized learning suggestions.</span>
+                        </div>
+
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="preference-row">
+
+                        <div>
+                            <strong>Daily Reminders</strong>
+                            <span>Get reminders to maintain your streak.</span>
+                        </div>
+
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="preference-row">
+
+                        <div>
+                            <strong>Quiz Notifications</strong>
+                            <span>Notify me about new practice quizzes.</span>
+                        </div>
+
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- DANGER ZONE -->
+                <section class="glass-card danger-card">
+
+                    <div class="danger-content">
+
+                        <div class="danger-icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div>
+                            <span class="card-label">ACCOUNT</span>
+                            <h3>Account Actions</h3>
+                            <p>
+                                Manage your account or sign out from this device.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="danger-actions">
+
+                        <button class="secondary-btn">
+                            <i class="fa-solid fa-download"></i>
+                            Export Data
+                        </button>
+
+                        <a href="main.html" class="logout-btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
