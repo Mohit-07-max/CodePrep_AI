@@ -1,0 +1,312 @@
+.app-nav-layout {
+    padding-left: 0 !important;
+}
+
+.app-nav-layout .main-content,
+.app-nav-layout .main-area {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
+body.sidebar-layout.app-nav-layout:not(.with-app-sidebar) .main-content,
+body.sidebar-layout.app-nav-layout:not(.with-app-sidebar) .main-area,
+body.profile-layout.app-nav-layout .main-content {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
+.app-nav-layout .app-page-navbar {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 76px;
+    margin: 0 0 24px;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(246, 249, 255, 0.9);
+    box-shadow: 0 8px 22px rgba(40, 40, 110, 0.07);
+}
+
+.app-page-heading,
+.app-page-actions {
+    display: flex;
+    align-items: center;
+}
+
+.app-page-heading {
+    gap: 14px;
+    min-width: 0;
+}
+
+.app-page-actions {
+    flex: 0 0 auto;
+    gap: 14px;
+}
+
+.app-page-title {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.app-page-state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.app-page-menu-toggle {
+    display: flex;
+    flex: 0 0 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.72);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.app-page-menu-toggle:hover {
+    border-color: rgba(91, 75, 255, 0.24);
+    background: rgba(91, 75, 255, 0.07);
+}
+
+.app-page-menu-toggle > span:not(.app-page-visually-hidden) {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text);
+}
+
+.app-page-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.app-page-home,
+.app-page-bell {
+    display: grid;
+    flex: 0 0 40px;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.app-page-home:hover,
+.app-page-bell:hover {
+    color: var(--blue);
+    background: rgba(91, 75, 255, 0.08);
+}
+
+.app-page-bell {
+    position: relative;
+}
+
+.app-page-bell .notification-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #e45b70;
+}
+
+.app-page-student {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+}
+
+.app-page-avatar {
+    display: grid;
+    flex: 0 0 38px;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.app-page-student-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    white-space: nowrap;
+}
+
+.app-page-student-info strong {
+    color: var(--text);
+    font-size: 0.82rem;
+}
+
+.app-page-student-info span {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+}
+
+.app-page-student > i {
+    color: var(--text-muted);
+    font-size: 0.65rem;
+}
+
+.app-page-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 1000;
+    width: min(245px, calc(100vw - 48px));
+    height: 100vh;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    pointer-events: none;
+    transition: transform 220ms ease;
+}
+
+.app-page-state:checked ~ .app-page-sidebar {
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.app-page-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    background: rgba(22, 24, 58, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+}
+
+.app-page-state:checked ~ .app-page-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.app-nav-layout .app-page-sidebar .app-sidebar-brand > span:last-child,
+.app-nav-layout .app-page-sidebar .app-nav-link > span {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border: 0;
+}
+
+.app-page-state:focus-visible ~ .app-page-sidebar,
+.app-page-menu-toggle:focus-visible,
+.app-page-home:focus-visible,
+.app-page-bell:focus-visible {
+    outline: 3px solid var(--purple);
+    outline-offset: 3px;
+}
+
+.app-page-state:focus-visible ~ .main-content .app-page-menu-toggle,
+.app-page-state:focus-visible ~ .history-page .app-page-menu-toggle {
+    outline: 3px solid var(--purple);
+    outline-offset: 3px;
+}
+
+.quiz-page-progress {
+    width: min(360px, 100%);
+    margin: 0 auto 24px;
+}
+
+@media (max-width: 600px) {
+    .app-nav-layout .app-page-navbar {
+        min-height: 64px;
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .app-page-heading {
+        gap: 8px;
+    }
+
+    .app-page-menu-toggle {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .app-page-title {
+        font-size: 1rem;
+    }
+
+    .app-page-actions {
+        gap: 6px;
+    }
+
+    .app-page-home,
+    .app-page-bell {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .app-page-avatar {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .app-page-student {
+        gap: 5px;
+    }
+
+    .app-page-student-info strong {
+        font-size: 0.65rem;
+    }
+
+    .app-page-student-info span {
+        font-size: 0.55rem;
+    }
+
+    .app-page-student > i {
+        display: none;
+    }
+
+    .app-page-progress {
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CodePrep AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body class="auth-page login-page">
+    <div class="auth-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="grid-lines"></span>
+    </div>
+
+    <main class="auth-shell">
+        <div class="auth-brand-mobile">
+            <a href="main.html" class="brand-link" aria-label="CodePrep AI home">
+                <span class="brand-icon"><i class="fa-solid fa-code"></i></span>
+                <span>CodePrep <b>AI</b></span>
+            </a>
+        </div>
+
+        <section class="auth-card" aria-label="Sign in to CodePrep AI">
+            <aside class="auth-showcase">
+                <a href="main.html" class="brand-link showcase-brand" aria-label="CodePrep AI home">
+                    <span class="brand-icon"><i class="fa-solid fa-code"></i></span>
+                    <span>CodePrep <b>AI</b></span>
+                </a>
+
+                <div class="showcase-content">
+                    <span class="showcase-kicker"><i class="fa-solid fa-sparkles"></i> AI-powered practice</span>
+                    <h1>Build skill.<br><span>Ship confidence.</span></h1>
+                    <p>Practice smarter with focused quizzes, coding challenges, and feedback that fits your pace.</p>
+
+                    <div class="metric-stack">
+                        <div class="metric-card">
+                            <span class="metric-icon"><i class="fa-solid fa-bolt"></i></span>
+                            <div><strong>Instant practice</strong><small>Generate a focused session in seconds.</small></div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-icon"><i class="fa-solid fa-chart-line"></i></span>
+                            <div><strong>Track progress</strong><small>See where your coding is improving.</small></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-orbit" aria-hidden="true">
+                    <span>&lt;/&gt;</span>
+                    <span>0101</span>
+                    <span>{ }</span>
+                </div>
+            </aside>
+
+            <section class="form-panel" aria-labelledby="login-title">
+                <div class="form-topline">
+                    <span class="status-dot"></span>
+                    <span>Welcome back</span>
+                </div>
+
+                <div class="form-heading">
+                    <h2 id="login-title">Sign in to continue</h2>
+                    <p class="subtitle">Pick up your practice right where you left off.</p>
+                </div>
+
+                <form class="auth-form">
+                    <div class="input-group">
+                        <label for="email">Email address</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        <span>Log in</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="divider"><span>or continue with</span></div>
+
+                <div class="social-options">
+                    <button class="social-button" type="button">
+                        <i class="fa-brands fa-google"></i><span>Google</span>
+                    </button>
+                    <button class="social-button" type="button">
+                        <i class="fa-brands fa-apple"></i><span>Apple</span>
+                    </button>
+                </div>
+
+                <p class="switch-copy">New to CodePrep AI? <a href="register.html">Create an account</a></p>
+                <a href="main.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to CodePrep AI</a>
+            </section>
+        </section>
+
+        <p class="auth-footer"><i class="fa-solid fa-shield-halved"></i> A focused workspace for better coding habits.</p>
+    </main>
+</body>
+</html>
