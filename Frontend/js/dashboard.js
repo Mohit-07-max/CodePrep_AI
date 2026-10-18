@@ -262,15 +262,68 @@
     function initProfile() {
         const profile = $(".app-page-student");
 
-        if (!profile) {
-            return;
+        if (profile) {
+            profile.style.cursor = "pointer";
+            profile.addEventListener("click", () => {
+                window.location.href = "profile.html";
+            });
         }
 
-        profile.style.cursor = "pointer";
+        // Synchronize with active user session
+        let email = null;
+        try {
+            email = sessionStorage.getItem("codeprep:session") || localStorage.getItem("codeprep:session");
+        } catch (e) { /* ignore */ }
 
-        profile.addEventListener("click", () => {
-            window.location.href = "profile.html";
-        });
+        const users = getStoredJSON("codeprep:users", []);
+        const user = email && Array.isArray(users) && users.find((u) => u && u.email === email);
+        let profileData = null;
+        try {
+            profileData = JSON.parse(localStorage.getItem("codeprep:profileData"));
+        } catch (e) { /* ignore */ }
+
+        const activeName = (user && user.name) || (profileData && profileData.name) || "Mohit";
+        const firstName = activeName.split(" ")[0] || activeName;
+        const welcomeSpan = $(".welcome-text h2 span");
+        if (welcomeSpan) welcomeSpan.textContent = `${firstName}!`;
+        const studentStrong = $(".app-page-student-info strong");
+        if (studentStrong) studentStrong.textContent = firstName;
+
+        let customAvatar = null;
+        try {
+            customAvatar = localStorage.getItem("codeprep:profileAvatar");
+        } catch (e) { /* ignore */ }
+
+        const avatar = $(".app-page-avatar, .avatar");
+        if (avatar) {
+            if (customAvatar) {
+                avatar.style.backgroundImage = `url("${customAvatar}")`;
+                avatar.style.backgroundSize = "cover";
+                avatar.style.backgroundPosition = "center";
+                avatar.style.color = "transparent";
+                avatar.textContent = "";
+            } else {
+                avatar.style.backgroundImage = "";
+                avatar.style.color = "";
+                avatar.innerHTML = '<i class="fa-solid fa-user" aria-hidden="true"></i>';
+            }
+        }
+
+        // Support Sign out in sidebar
+        const signInLink = $('.app-sidebar-account a[href="login.html"]');
+        if (user && signInLink) {
+            signInLink.title = "Sign out";
+            const span = $("span", signInLink);
+            if (span) span.textContent = "Sign out";
+            const icon = $("i", signInLink);
+            if (icon) icon.className = "fa-solid fa-right-from-bracket";
+            signInLink.addEventListener("click", () => {
+                try {
+                    sessionStorage.removeItem("codeprep:session");
+                    localStorage.removeItem("codeprep:session");
+                } catch (e) { /* ignore */ }
+            });
+        }
     }
 
     function initLanguageCards() {

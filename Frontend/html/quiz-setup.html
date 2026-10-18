@@ -9,83 +9,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="..\css\quiz-setup.css">
+    <link rel="stylesheet" href="../css/quiz-setup.css">
    
 
     <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body class="sidebar-layout">
 
-    <aside
-  class="app-sidebar"
-  id="app-sidebar"
-  aria-label="CodePrep AI sidebar"
-  aria-hidden="true"
-  inert
->
-
-  <div class="drawer-heading">
-
-    <a
-      href="main.html"
-      class="app-sidebar-brand"
-      aria-label="CodePrep AI home"
-    >
-
-      <span
-        class="app-sidebar-brand-icon"
-      >
-        <i
-          class="fa-solid fa-code"
-          aria-hidden="true"
-        ></i>
+    <aside class="app-sidebar" id="app-sidebar" aria-label="CodePrep AI sidebar" aria-hidden="true" inert>
+    <div class="drawer-heading">
+        <a href="main.html" class="app-sidebar-brand" aria-label="CodePrep AI home">
+      <span class="app-sidebar-brand-icon">
+        <i class="fa-solid fa-code" aria-hidden="true"></i>
       </span>
-
       <span>
         CodePrep
         <span class="app-sidebar-brand-ai">
           AI
         </span>
       </span>
-
     </a>
-
-
     <!-- Close sidebar -->
-    <button
-      class="drawer-close"
-      type="button"
-      aria-label="Close sidebar navigation"
-    >
-      <i
-        class="fa-solid fa-xmark"
-        aria-hidden="true"
-      ></i>
+    <button class="drawer-close" type="button" aria-label="Close sidebar navigation">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
     </button>
-
   </div>
 
-
-
   <!-- Sidebar navigation -->
-  <nav
-    class="app-sidebar-nav"
-    aria-label="Main navigation"
-  >
-
-    <a
-      class="app-nav-link"
-      href="main.html"
-      title="Home"
-    >
-      <i
-        class="fa-solid fa-house"
-        aria-hidden="true"
-      ></i>
+  <nav class="app-sidebar-nav" aria-label="Main navigation">
+    <a class="app-nav-link" href="main.html" title="Home">
+      <i class="fa-solid fa-house" aria-hidden="true"></i>
       <span>Home</span>
     </a>
 
@@ -221,9 +176,7 @@
 <span class="notification-dot"></span>
 </button>
 <a href="profile.html" class="profile app-page-student" aria-label="Mohit’s profile">
-<div class="avatar app-page-avatar">
-M
-</div>
+<div class="avatar app-page-avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
 <div class="profile-info app-page-student-info">
 <strong>Mohit</strong>
 <span>Student</span>
@@ -544,19 +497,17 @@ M
                                 Number of Questions
                             </label>
 
+                            
                             <div class="number-control">
-
-                                <button>
+                                <button type="button" aria-label="Fewer questions">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
-
                                 <span>10</span>
-
-                                <button>
+                                <button type="button" aria-label="More questions">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
-
                             </div>
+
 
                         </div>
 
@@ -607,7 +558,7 @@ M
                                 </option>
 
                                 <option>
-                                    No Limit
+                                    60 Minutes
                                 </option>
 
                             </select>
@@ -771,36 +722,5 @@ M
     </main>
 
     <script src="../js/quiz-setup.js"></script>
-<script>
-(() => {
-  const toggle = document.querySelector('.dashboard-menu-button');
-  const drawer = document.getElementById('app-sidebar');
-  const overlay = document.querySelector('.sidebar-overlay');
-  const close = document.querySelector('.drawer-close');
-  if (!toggle || !drawer || !overlay || !close) return;
-  const setOpen = (open) => {
-    document.body.classList.toggle('sidebar-open', open);
-    drawer.classList.toggle('is-open', open);
-    drawer.inert = !open;
-    drawer.setAttribute('aria-hidden', String(!open));
-    toggle.setAttribute('aria-expanded', String(open));
-    if (open) close.focus(); else toggle.focus();
-  };
-  toggle.addEventListener('click', () => setOpen(!drawer.classList.contains('is-open')));
-  close.addEventListener('click', () => setOpen(false));
-  overlay.addEventListener('click', () => setOpen(false));
-  drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
-  document.addEventListener('keydown', (event) => {
-    if (!drawer.classList.contains('is-open')) return;
-    if (event.key === 'Escape') { setOpen(false); return; }
-    if (event.key !== 'Tab') return;
-    const items = Array.from(drawer.querySelectorAll('a[href], button'));
-    const first = items[0], last = items[items.length - 1];
-    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
-    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
-  });
-})();
-</script>
-
 </body>
 </html>

@@ -53,11 +53,11 @@
             <div class="app-page-actions">
                 <a href="main.html" class="app-page-home" aria-label="Home" title="Home"><i class="fa-solid fa-house" aria-hidden="true"></i></a>
                 <button class="app-page-bell" type="button" aria-label="Notifications" title="Notifications"><i class="fa-regular fa-bell" aria-hidden="true"></i></button>
-                <div class="app-page-student">
-                    <div class="app-page-avatar">M</div>
-                    <div class="app-page-student-info"><strong>Mohit</strong><span>Student</span></div>
+                <a href="profile.html" class="profile app-page-student" aria-label="Mohit’s profile" style="text-decoration:none; color:inherit;">
+                    <div class="avatar app-page-avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+                    <div class="profile-info app-page-student-info"><strong>Mohit</strong><span>Student</span></div>
                     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                </div>
+                </a>
             </div>
         </header>
 
@@ -108,7 +108,7 @@
                             C
                         </div>
 
-                        <button class="copy-btn" title="Copy Code">
+                        <button class="copy-btn" type="button" title="Copy Code" aria-label="Copy code">
                             <i class="fa-regular fa-copy"></i>
                         </button>
 
@@ -208,7 +208,7 @@ int main() {
                         </p>
                     </div>
 
-                    <button class="hint-btn">
+                    <button class="hint-btn" type="button">
                         Show Hint
                     </button>
 
@@ -218,20 +218,20 @@ int main() {
                 <!-- NAVIGATION -->
                 <div class="question-navigation">
 
-                    <button class="previous-btn" disabled>
+                    <button class="previous-btn" type="button" disabled>
                         <i class="fa-solid fa-arrow-left"></i>
                         Previous
                     </button>
 
-                    <button class="mark-btn">
+                    <button class="mark-btn" type="button">
                         <i class="fa-regular fa-bookmark"></i>
                         Mark for Review
                     </button>
 
-                    <a class="next-btn" href="result.html">
+                    <button class="next-btn" type="button">
                         Submit Quiz
                         <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </button>
 
                 </div>
 
@@ -365,5 +365,40 @@ int main() {
 
     </div>
 
+    <div class="exit-modal-overlay" id="exitModal">
+        <div class="exit-modal">
+
+            <div class="exit-modal-icon">
+            ⚠️
+            </div>
+
+            <h2>Exit Quiz?</h2>
+
+            <p>
+                Your current progress will be lost.
+                Selected answers, marked questions, and remaining time
+                will not be saved.
+            </p>
+
+            <div class="exit-modal-actions">
+                <button
+                    type="button"
+                    class="exit-modal-btn exit-stay-btn"
+                    id="stayQuizBtn">
+                    Stay in Quiz
+                </button>
+
+                <button
+                    type="button"
+                    class="exit-modal-btn exit-confirm-btn"
+                    id="confirmExitBtn">
+                    Exit Quiz
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/quiz.js"></script>
 </body>
 </html>

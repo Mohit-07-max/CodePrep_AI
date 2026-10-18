@@ -1022,16 +1022,28 @@ body {
     color: var(--blue);
 }
 
-.nav-question.active {
+
+/* Answer selected: BLUE */
+.nav-question.answered {
+    color: var(--blue);
     border-color: var(--blue);
-
-    color: white;
-
-    background: rgba(91, 75, 255, 0.12);
-
-    box-shadow:
-        0 0 15px rgba(91, 75, 255, 0.12);
+    background: rgba(91, 75, 255, 0.10);
 }
+
+/* Marked for review: GREY (unless answered) */
+.nav-question.marked:not(.answered) {
+    color: #64748b;
+    border-color: #cbd5e1;
+    background: rgba(148, 163, 184, 0.15);
+}
+
+/* Keep answered questions blue even when currently active */
+.nav-question.active.answered {
+    color: var(--blue);
+    border-color: var(--blue);
+    background: rgba(91, 75, 255, 0.10);
+}
+
 
 .legend {
     margin-top: 18px;
@@ -1342,4 +1354,170 @@ body {
         grid-column: auto;
     }
 
+}
+
+/* ================================
+   EXIT QUIZ WARNING MODAL
+================================ */
+
+.exit-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.exit-modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.exit-modal {
+    width: 100%;
+    max-width: 420px;
+
+    background: #ffffff;
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.3);
+
+    transform: scale(0.9) translateY(15px);
+
+    transition: transform 0.25s ease;
+}
+
+.exit-modal-overlay.show .exit-modal {
+    transform: scale(1) translateY(0);
+}
+
+/* Warning Icon */
+
+.exit-modal-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff3cd;
+    color: #f59e0b;
+
+    font-size: 30px;
+}
+
+/* Title */
+
+.exit-modal h2 {
+    margin: 0 0 10px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #1f2937;
+}
+
+/* Message */
+
+.exit-modal p {
+    margin: 0 auto 24px;
+
+    max-width: 340px;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #6b7280;
+}
+
+/* Buttons */
+
+.exit-modal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.exit-modal-btn {
+    flex: 1;
+
+    min-height: 46px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.exit-modal-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Stay button */
+
+.exit-stay-btn {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.exit-stay-btn:hover {
+    background: #e5e7eb;
+}
+
+/* Exit button */
+
+.exit-confirm-btn {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.exit-confirm-btn:hover {
+    background: #b91c1c;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .exit-modal {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .exit-modal-actions {
+        flex-direction: column;
+    }
+
+    .exit-modal-btn {
+        width: 100%;
+    }
 }
