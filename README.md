@@ -88,7 +88,7 @@ Because CodePrep AI is built purely with web standards, you do not need Node.js 
 
 1. Clone or download the repository:
    ```bash
-   git clone https://github.com/Mohit-07-max/Vibe_Code.git
+   git clone https://github.com/Mohit-07-max/CodePrep_AI.git
    ```
 2. Open any page directly in your browser:
    - Double click `Frontend/html/main.html` or `Frontend/html/dashboard.html`.
